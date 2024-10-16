@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciencia - Noticias del Día</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="myestilo.CSS" />
+    <script type="text/javascript" src="js.JS"></script>
+  </head>
+
+  <body onload="noticiasIniciales()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Noticias del Día</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="pagdeporte.HTML">Deporte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pagfarandula.HTML">Farandulas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pagindex.HTML">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pagpokemonapi.HTML">Pokemones</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container my-5">
+      <header class="mb-4">
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="display-4 text-light">Noticias de Ciencia</h1>
+          </div>
+        </div>
+
+        <section>
+          <div class="row mb-4">
+            <div class="col-md-8 offset-md-2">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="cTitulo"
+                  class="form-control"
+                  placeholder="Escribe un título..."
+                />
+                <input
+                  type="text"
+                  id="cDescripcion"
+                  class="form-control"
+                  placeholder="Escribe la descripción..."
+                />
+                <input
+                  type="text"
+                  id="cImagen"
+                  class="form-control"
+                  placeholder="URL de la imagen..."
+                />
+                <button class="btn btn-primary" onclick="agregarNoticia()">
+                  Agregar Noticia
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <section id="contenedorNoticias"></section>
+      <div class="row"></div>
+
+      <footer class="text-center text-light mt-5">
+        <p>&copy; 2024 Ciencia - Noticias del Día. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+  </body>
+</html>
